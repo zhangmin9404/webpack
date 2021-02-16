@@ -1,0 +1,8 @@
+#box2 {
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  background-color: green;
+  display: flex;
+  backface-visibility: hidden;
+}
