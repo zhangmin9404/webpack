@@ -14,7 +14,7 @@
  */
 const { resolve } = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
   entry: ['./src/js/index.js', './src/index.html'],
   output: {
@@ -64,7 +64,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
-    })
+    }),
+    // new CleanWebpackPlugin()
   ],
   mode: 'development',
   devServer: {
@@ -74,7 +75,7 @@ module.exports = {
     open: true,
     hot: true
   },
-  devtool: 'eval-source-map'
+  // devtool: 'eval-source-map'
 }
 /*
 source-map: 一种提供源代码到构建后代码映射技术(如果构建后代码出错了.通过映射可以追踪源代码错误)

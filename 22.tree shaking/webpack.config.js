@@ -4,14 +4,17 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 /*
-tree shaking: 去除无用代码
+
+webpack
+tree shaking: 在应用程序中去除没有使用的代码, 使代码体积变得更小
   前提: 1.必须使用ES6模块, 2.开启production环境
   作用: 减少代码体积
 
    
   在 package.json中配置
-      "sideEffects": false 所有代码都没有副作用, (都可以进行tree shaking)
+      "sideEffects": false 所有代码都没有副作用(都可以进行tree shaking)
         问题: 可能会把css /@babel/polyfill (副作用)文件干掉
+        可能会因为webpack版本出现些问题
 
 */
 process.env.NODE_ENV === 'production'

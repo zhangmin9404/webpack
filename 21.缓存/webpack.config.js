@@ -3,6 +3,8 @@ const { resolve } = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
 // 定义nodejs环境变量: 决定使用browerslist使用哪个环境
 process.env.NODE_ENV === 'production'
 // 复用loader
@@ -126,7 +128,8 @@ module.exports = {
         collapseWhitespace: true,
         removeComments: true
       }
-    })
+    }),
+    new CleanWebpackPlugin()
   ],
   mode: 'production',
   devtool: 'source-map'
