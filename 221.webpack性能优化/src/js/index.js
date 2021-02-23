@@ -3,7 +3,7 @@ import '../css/iconfont.css'
 // import '../css/index.less'
 import print from './print.js'
 
-console.log('index.js文件被重新加载了')
+console.log('index.js文件被重新加载了~')
 print()
 require('!style-loader!css-loader!less-loader!./index.less');
 function add (x, y) {
