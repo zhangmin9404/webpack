@@ -1,4 +1,4 @@
-console.log('print.js被加载了..')
+console.log('print.js被加载了!')
 function print () {
 
   const content = 'hello print'

@@ -75,7 +75,7 @@ module.exports = {
     open: true,
     hot: true
   },
-  // devtool: 'eval-source-map'
+  devtool: 'source-map'
 }
 /*
 source-map: 一种提供源代码到构建后代码映射技术(如果构建后代码出错了.通过映射可以追踪源代码错误)

@@ -97,6 +97,6 @@ module.exports = {
     open: true,
     // 开启HMR功能
     // 当修改webpack配置, 新配置要想生效必须重新启动
-    // hot: true
+    hot: true
   }
 }
