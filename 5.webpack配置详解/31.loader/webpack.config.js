@@ -11,12 +11,12 @@ module.exports = {
   },
   module: {
     rules: [
-       // loader的配置
+      // loader的配置
 
       {
         test: /\.css$/,
         // 多个loader用use
-        use:['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.js$/,
@@ -27,13 +27,13 @@ module.exports = {
         //优先执行
         enforce: 'pre',
         // 延后执行
-       // enforce: 'post'
+        // enforce: 'post'
         // 单个loader用loader
         loader: 'eslint-loader',
         option: {},
         // 以下配置只会生效一个
         oneOf: []
-        
+
       }
 
     ]
